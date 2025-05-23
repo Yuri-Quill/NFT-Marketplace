@@ -2,7 +2,6 @@
 
 @mixin h1-fs {
 	font-size: clamp(1.75rem, 0.906rem + 5vw, 4.188rem);
-	font-style: normal;
 	font-weight: 600;
 	line-height: 110%;
 	text-transform: capitalize;
@@ -10,7 +9,6 @@
 
 @mixin h2-fs {
 	font-size: clamp(2.375rem, 2.094rem + 1.667vw, 3.188rem);
-	font-style: normal;
 	font-weight: 600;
 	line-height: 110%;
 	text-transform: capitalize;
@@ -18,7 +16,6 @@
 
 @mixin h3-fs {
 	font-size: clamp(1.75rem, 1.534rem + 1.282vw, 2.375rem);
-	font-style: normal;
 	font-weight: 600;
 	line-height: 120%;
 	text-transform: capitalize;
@@ -26,7 +23,6 @@
 
 @mixin h5-fs {
 	font-size: 1.375rem;
-	font-style: normal;
 	font-weight: 600;
 	line-height: 140%;
 	text-transform: capitalize;
