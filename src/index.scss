@@ -1,7 +1,24 @@
-
 body {
+	color: $white-color;
 	font-family: "Work Sans", sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: normal;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: normal;
+	background-color: $bg-main;
+}
+
+h1 {
+	@include h1-fs;
+}
+
+h2 {
+	@include h2-fs;
+}
+
+h3 {
+	@include h3-fs;
+}
+
+h5 {
+	@include h5-fs;
 }
