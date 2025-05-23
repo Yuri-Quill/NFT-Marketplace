@@ -7,6 +7,7 @@ import router from "./routes";
 import { store } from "./store/store";
 
 import "@helpers/reset.scss";
+import "@assets/fonts/work-sans/font.scss";
 import "react-toastify/ReactToastify.css";
 import "./index.scss";
 
