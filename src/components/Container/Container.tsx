@@ -6,7 +6,7 @@ interface IContainerProps {
 	className: string;
 }
 const Container = ({ children, className }: IContainerProps) => {
-	return <div className={cn("container", className, true)}>{children}</div>;
+	return <div className={cn({ baseClass: "container", modifier: className, mod: true })}>{children}</div>;
 };
 
 export default Container;

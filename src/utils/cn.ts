@@ -1,6 +1,11 @@
 import clsx from "clsx";
-
-const cn = (baseClass: string, modifier?: string, mod: boolean = false, additionalClass?: string): string => {
+interface ICnProps {
+	baseClass: string;
+	modifier?: string;
+	mod?: boolean;
+	additionalClass?: string;
+}
+const cn = ({ baseClass, modifier, mod = false, additionalClass }: ICnProps): string => {
 	const className = clsx(baseClass, mod && modifier ? `${baseClass}--${modifier}` : null, additionalClass);
 	return className;
 };
