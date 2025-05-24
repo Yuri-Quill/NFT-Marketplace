@@ -3,9 +3,10 @@ import "./Container.scss";
 
 interface IContainerProps {
 	children: React.ReactNode;
+	className: string;
 }
-const Container = ({ children }: IContainerProps) => {
-	return <div className={cn("container", "header", true)}>{children}</div>;
+const Container = ({ children, className }: IContainerProps) => {
+	return <div className={cn("container", className, true)}>{children}</div>;
 };
 
 export default Container;
