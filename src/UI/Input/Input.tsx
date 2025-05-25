@@ -16,11 +16,11 @@ type inputProps = React.InputHTMLAttributes<HTMLInputElement> & {
 const Input = ({ name, className, type, children, icon, additionalIcon, as, ...rest }: inputProps) => {
 	return (
 		<div className={cn({ baseClass: "input", additionalClass: className })}>
-			{icon && icon}
+			{icon}
 
 			<Field className="input__field" name={name} type={type} children={children} as={as} {...rest} />
 
-			{additionalIcon && additionalIcon}
+			{additionalIcon}
 
 			<ErrorMessage className="input__error" name={name} component="span" />
 		</div>
