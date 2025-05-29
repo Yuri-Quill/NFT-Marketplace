@@ -9,7 +9,7 @@ const ErrorPage = () => {
 
 	const error: IApiErrorResponse = isRouteErrorResponse(rawError)
 		? {
-				message: rawError.data?.message || "Unknown error!",
+				message: rawError.data?.message || rawError.statusText || "Unknown error!",
 				status: rawError.status,
 				statusText: rawError.statusText || "Something went wrong!",
 		  }
@@ -26,13 +26,24 @@ const ErrorPage = () => {
 		  };
 
 	return (
-		<section className="error-page" role="alert" aria-label={`Error ${error.status}: ${error.statusText}`}>
+		<section
+			className="error-page"
+			role="alert"
+			aria-label={`Error ${error.status}: ${error.statusText}`}
+		>
 			<article className="error-page__article">
 				<h1 className="error-page__title">Oops, something went wrong!</h1>
 				<h2 className="error-page__subtitle">{error.status}</h2>
-				<p className="error-page__text">{error.message || error.statusText}</p>
+				<p className="error-page__text">
+					{error.message !== error.statusText ? error.message : error.statusText}
+				</p>
 
-				<Link className="error-page__link" to="/" role="link" aria-label="Go back to the homepage">
+				<Link
+					className="error-page__link"
+					to="/"
+					role="link"
+					aria-label="Go back to the homepage"
+				>
 					Go back
 				</Link>
 			</article>
