@@ -1,0 +1,62 @@
+.error-page {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-block-size: 100vh;
+	padding: 2rem;
+	background: url("@/assets/images/error-bg.png") no-repeat center/cover;
+	color: #fff;
+	text-align: center;
+
+	&__article {
+		background-color: rgba(0, 0, 0, 0.6);
+		padding: 2rem;
+		border-radius: 1rem;
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+		max-inline-size: 600px;
+		inline-size: 100%;
+		animation: fadeInUp 0.8s ease-out;
+	}
+
+	&__title {
+		font-size: 2rem;
+		margin-block-end: 1rem;
+	}
+
+	&__subtitle {
+		font-size: 4rem;
+		margin-block-end: 1rem;
+		font-weight: bold;
+	}
+
+	&__text {
+		font-size: 1.2rem;
+		margin-block-end: 2rem;
+	}
+
+	&__link {
+		display: inline-block;
+		padding: 0.75rem 1.5rem;
+		background-color: #ff5252;
+		color: white;
+		border-radius: 8px;
+		text-decoration: none;
+		font-weight: bold;
+		transition: background-color 0.3s ease;
+
+		&:hover {
+			background-color: #e63946;
+		}
+	}
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
